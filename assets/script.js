@@ -1,7 +1,12 @@
-const myButton = document.getElementById('my-button');
+(function onStart() {
 
-if(myButton){
-    myButton.addEventListener('click', ()=>{
-        alert("hello!");
-    });
-}
+    const myButton = document.getElementById('my-button');
+    console.log("started! myButton", myButton)
+
+    if (myButton) {
+        console.log('adding event listener to myButton')
+        myButton.addEventListener('click', () => {
+            alert("hello!");
+        });
+    }
+})()
